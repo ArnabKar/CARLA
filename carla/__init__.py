@@ -4,6 +4,10 @@ import logging
 
 from ._logger import INFOFORMATTER
 
+import warnings
+
+warnings.filterwarnings("ignore", message=r"Passing", category=FutureWarning)
+
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 

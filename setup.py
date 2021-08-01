@@ -35,6 +35,11 @@ setup(
     ],
     package_dir={"carla": "carla"},
     install_requires=[
+        "Click==8.0.1",
+        "dice-ml==0.5",
+        "h5py==2.10.0",
+        "ipython",
+        "keras==2.3.0",
         "lime==0.2.0.1",
         "mip==1.12.0",
         "numpy==1.19.4",
@@ -44,9 +49,10 @@ setup(
         "tensorflow==1.14.0",
         "torch==1.7.0",
         "torchvision==0.8.1",
-        "h5py==2.10.0",
-        "dice-ml==0.5",
-        "ipython",
-        "keras==2.3.0",
     ],
+    entry_points={
+        "console_scripts": [
+            "carla = carla.carla:cli",
+        ],
+    },
 )
